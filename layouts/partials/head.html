@@ -27,6 +27,9 @@
 		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
 
+  <!-- MathJax -->
+  {{ if .Params.mathjax }}{{ partial "mathjax_support.html" . }}{{ end }}
+
   <!-- google analytics -->
   {{ template "_internal/google_analytics.html" . }}
 </head>
